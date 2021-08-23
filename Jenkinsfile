@@ -2,9 +2,12 @@ pipeline {
 	agent any
 	stages{
 		stage("build"){
-			echo 'build stage'
-			sh 'make'
-			archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+			steps{
+				echo 'build stage'
+				sh 'mvn build'
+				archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+				
+			}
 		}
 	}
 }
