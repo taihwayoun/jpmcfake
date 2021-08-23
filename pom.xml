@@ -15,11 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
-		<resteasy.version>4.7.0.Final</resteasy.version>
-		<resteasy.jackson.version>2.12.3</resteasy.jackson.version>
-		<jboss-logging.ver>3.4.0.Final</jboss-logging.ver>
-		<modular.jdk.args/>
-		<modular.jdk.props/>		
+		<rest-assured.version>3.0.3</rest-assured.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -31,6 +27,15 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency> -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<rest-assure.version>${rest-assure-version}</rest-assure.version>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
