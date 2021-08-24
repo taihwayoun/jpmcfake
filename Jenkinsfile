@@ -16,5 +16,14 @@ pipeline {
 			
 			}
 		}
+		stage('deploy'){
+			when {
+				expression {
+					currentBuild.result==null || currentBuild.result=='SUCCESS'
+				}
+			}
+			steps {
+				echo 'Deloyment ready'
+		}
 	}
 }
