@@ -10,8 +10,11 @@ pipeline {
 			}
 		}
 		stage("test"){
-			echo 'test stage'
-			sh 'mvn test'
+			steps{
+				echo 'test stage'
+				sh 'mvn test'
+			
+			}
 		}
 	}
 }
