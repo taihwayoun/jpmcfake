@@ -1,6 +1,8 @@
 pipeline {
 	agent any
-	enviroment { 
+	environment { 
+		GMAIL_ID = credentials('thyoun1961')
+		GMAIL_PD = credentials('Newberry1918')
 	}
 	stages{
 		stage("build"){
