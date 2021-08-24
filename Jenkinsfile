@@ -1,13 +1,17 @@
 pipeline {
 	agent any
 	stages{
-		stage("build"){
+		stage("compile"){
 			steps{
 				echo 'build stage'
-				sh 'mvn package'
+				sh 'mvn compile'
 				archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 				
 			}
+		}
+		stage("test"){
+			echo 'test stage'
+			sh 'mvn test'
 		}
 	}
 }

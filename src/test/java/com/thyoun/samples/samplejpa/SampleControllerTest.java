@@ -5,12 +5,12 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 
 import io.restassured.RestAssured;
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.*;
-import static io.restassured.module.mockmvc.matcher.RestAssuredMockMvcMatchers.*;
+//import static io.restassured.module.mockmvc.matcher.RestAssuredMockMvcMatchers.*;
 
 public class SampleControllerTest {
 
@@ -24,7 +24,7 @@ public class SampleControllerTest {
 	}
 
 	@Test
-	public void testUserFetchesSuccess() {
+	public void testGetEmployee() {
 		given()
 			.standaloneSetup(new SampleController())
 		.when()
