@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	environment { 
 		GMAIL_ID = credentials('thyoun1961')
-		GMAIL_PD = credentials('Newberry1618')
+		//GMAIL_PD = credentials('Newberry1618')
 	}
 	stages{
 		stage("build"){
@@ -29,7 +29,7 @@ pipeline {
 			}
 			steps {
 				echo 'Deloyment ready'
-				sh('curl -u $GMAIL_ID:$GMAIL_PD https://gmail.com')
+				//sh('curl -u $GMAIL_ID:$GMAIL_PD https://gmail.com')
 		}
 	}
 }
